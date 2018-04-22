@@ -29,15 +29,7 @@
 
 	<!-- CUSTOM CSS -->
 	<link href="css/style.css" rel="stylesheet">
-
-	<!-- Recaptcha by google -->
-    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
-    <script>
-        function onSubmit(token) {
-          document.getElementById("hdr-expert-subscription").submit();
-        }
-    </script>
-
+	
 </head>
 
 <body class="body-wrapper">
@@ -787,15 +779,22 @@
 						<div class="title">
 							<h2>Subscribe</h2>
 						</div>
-						<div class="description">
-							<!-- <p>Demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee idea of denouncing pleasure and praising</p> -->
-						</div>
-						<form name='hdr-expert-subscription' id='hdr-expert-subscription' method='post' action='https://www.getdrip.com/forms/859519698/submissions' data-drip-embedded-form="859519698">
-							<h3 data-drip-attribute="headline" hidden>Subscribe</h3>
-							<div data-drip-attribute="description" hidden>Subscription form</div>
-							<div class="input-group">
-								<input type="text" name='fields[email]' class="form-control main" placeholder="Enter your email address">
-								<button id="btnGroupAddon" class="input-group-addon tf-ion-android-send g-recaptcha" type='submit' name='submit-button'  data-drip-attribute="sign-up-button" data-callback="onSubmit" data-sitekey="6LetWVIUAAAAAL969Czq6mZMV28ZSlzFniT9Hgp-"></button>
+						<form name='hdr-expert-subscription' class='ck_subscribe_form' id='ck_subscribe_form' method='post' action='https://app.convertkit.com/landing_pages/379303/subscribe' data-remote="true">
+							<input type="hidden" value="{&quot;form_style&quot;:&quot;minimal&quot;,&quot;converted_behavior&quot;:&quot;hide&quot;,&quot;days_no_show&quot;:&quot;15&quot;,&quot;delay_seconds&quot;:&quot;10&quot;,&quot;display_devices&quot;:&quot;all&quot;,&quot;display_position&quot;:&quot;br&quot;,&quot;embed_style&quot;:&quot;inline&quot;,&quot;embed_trigger&quot;:&quot;scroll_percentage&quot;,&quot;scroll_percentage&quot;:&quot;70&quot;}" id="ck_form_options">
+							<input type="hidden" name="id" value="379303" id="landing_page_id">
+							<input type="hidden" name="ck_form_recaptcha" value="" id="ck_form_recaptcha">
+							<div class="ck_errorArea">
+								<div id="ck_error_msg" style="display:none">
+								<p>There was an error submitting your subscription. Please try again.</p>
+								</div>
+							</div>
+							<div class="input-group ck_control_group ck_email_field_group">
+								<label class="ck_label" for="ck_emailField" style="display: none">Email Address</label>
+								<input type="email" name='email' class="form-control main ck_email_address" placeholder="Enter your email address" required>
+								<div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+									<input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+								</div>
+								<button id="ck_subscribe_button" class="input-group-addon tf-ion-android-send subscribe_button ck_subscribe_button" type='submit' name='submit-button'></button>
 							</div>
 						</form>
 						<!-- <div class="subscription-tag text-right">
@@ -894,21 +893,9 @@
 	<script src="plugins/slick/slick.min.js"></script>
 	<script src="plugins/smoothscroll/SmoothScroll.min.js"></script>
 	<script src="js/custom.js"></script>
-	<!-- Drip -->
-    <script type="text/javascript">
-        var _dcq = _dcq || [];
-        var _dcs = _dcs || {};
-        _dcs.account = '9502493';
-  
-        (function() {
-            var dc = document.createElement('script');
-            dc.type = 'text/javascript'; dc.async = true;
-            dc.src = '//tag.getdrip.com/9502493.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(dc, s);
-        })();
-    </script>
-    <!-- end Drip -->
+	<!-- Convertkit start -->
+	<script src="https://assets.convertkit.com/assets/CKJS4.js?v=21"></script>
+    <!-- Convertkit end -->
 
 </body>
 
